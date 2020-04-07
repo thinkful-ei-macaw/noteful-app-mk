@@ -1,0 +1,31 @@
+.app main {
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+}
+
+.app .error {
+  background: #8881D8;
+  color: white;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.app .error div {
+  border: 1px solid white;
+  padding: 2rem;
+  width: 90%;
+  max-width: 600px;
+}
+
+.app .error span {
+  font-weight: bold;
+  color: pink;
+}
+
+@media screen and (min-width: 860px) {
+  .app main {
+    flex-direction: row;
+  }
+}
