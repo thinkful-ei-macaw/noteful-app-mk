@@ -4,7 +4,12 @@ import PropTypes from 'prop-types';
 class SelectedNote extends React.Component {
   render() {
     return (
-      <article><p>{this.props.content}</p></article>
+      <article>
+        <p
+          dangerouslySetInnerHTML={{
+            __html: this.props.content.split('\n').join('<br>')
+          }}></p>
+      </article>
     )
   }
 }

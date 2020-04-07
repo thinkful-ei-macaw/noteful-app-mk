@@ -11,7 +11,7 @@ class FolderList extends React.Component {
     const id = this.props.match.params.id || null;
 
     const folders = this.context.data.folders.map(folder => (
-      <Folder key={folder.id} id={folder.id} active={folder.id === id} name={folder.name} />
+      <Folder {...this.props} key={folder.id} id={folder.id} active={folder.id === id} name={folder.name} />
     ))
 
     return (

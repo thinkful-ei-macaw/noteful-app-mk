@@ -1,4 +1,4 @@
-const BASE_URL = 'http://localhost:8080/';
+const BASE_URL = 'https://guarded-cove-09619.herokuapp.com/';
 
 const doFetch = (...params) => {
   let error;
@@ -43,6 +43,13 @@ const addFolder = folder => {
   });
 }
 
+const deleteFolder = id => {
+  return doFetch(BASE_URL + 'folders/' + id, {
+    headers: {'content-type': 'application/json'},
+    method: 'DELETE'
+  });
+}
+
 const addNote = note => {
   return doFetch(BASE_URL + 'notes', {
     method: 'POST',
@@ -62,6 +69,7 @@ export default {
   getFolders,
   getNotes,
   addFolder,
+  deleteFolder,
   addNote,
   deleteNote
 }

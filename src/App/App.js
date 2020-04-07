@@ -57,7 +57,7 @@ class App extends React.Component {
     this.setState(currentState);
   }
 
-  componentDidMount() {
+  getData = () => {
     api.getFolders()
       .then(data => {
         this.setState({ folders: data });
@@ -73,13 +73,18 @@ class App extends React.Component {
       })
   }
 
+  componentDidMount() {
+    this.getData();
+  }
+
   render() {
     const contextValue = {
       data: this.state,
       addClick: this.handleAddClick,
       addNoteSubmit: this.handleAddNoteSubmit,
       addFolderSubmit: this.handleAddFolderSubmit,
-      deleteNote: this.handleDeleteNote
+      deleteNote: this.handleDeleteNote,
+      refresh: this.getData
     }
 
     return (

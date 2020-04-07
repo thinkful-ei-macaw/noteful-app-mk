@@ -69,8 +69,7 @@ class AddNote extends React.Component {
     return (
       <form
         onChange={this.validate}
-        onSubmit={this.handleSubmit}
-        onClick={e => e.stopPropagation()}>
+        onSubmit={this.handleSubmit}>
         <h2>Add Note</h2>
         <div>
           <label htmlFor="name">
@@ -101,6 +100,7 @@ class AddNote extends React.Component {
           </select>
         </div>
         <button disabled={this.state.hasErrors()}>Submit</button>
+        <button type="button" onClick={() => this.context.addClick()}>Cancel</button>
       </form>
     )
   }

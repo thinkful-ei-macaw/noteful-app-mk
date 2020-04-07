@@ -59,8 +59,7 @@ class AddFolder extends React.Component {
     return (
       <form
         onChange={this.validate}
-        onSubmit={this.handleSubmit}
-        onClick={e => e.stopPropagation()}>
+        onSubmit={this.handleSubmit}>
         <h2>Add Folder</h2>
         <div>
           <label htmlFor="name">
@@ -71,6 +70,7 @@ class AddFolder extends React.Component {
           
         </div>
         <button disabled={this.state.hasErrors()}>Submit</button>
+        <button type="button" onClick={() => this.context.addClick()}>Cancel</button>
       </form>
     )
   }

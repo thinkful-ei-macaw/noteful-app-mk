@@ -11,7 +11,7 @@ class Overlay extends React.Component {
 
   render() {
     return (
-      <div className="overlay" onClick={() => this.context.addClick()}>
+      <div className="overlay">
         {this.context.data.addMode === 'folder' ? (
           <AddFolder />
         ) : (

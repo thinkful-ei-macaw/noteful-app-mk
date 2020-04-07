@@ -70,6 +70,29 @@
   border-radius: .3rem;
 }
 
+.react-contextmenu {
+  background: #FFF;
+  color: #000;
+  border-radius: .2rem;
+  box-shadow: 0 .5rem 1rem rgba(0,0,0,0.2);
+  overflow: hidden;
+  transition: all .1s ease;
+}
+
+.react-contextmenu .react-contextmenu-item {
+  padding: 0.7rem;
+  cursor: pointer;
+  transition: all .2s ease;
+}
+
+.react-contextmenu .react-contextmenu-item:last-of-type {
+  color: #F40;
+}
+
+.react-contextmenu .react-contextmenu-item--selected {
+  background: #DDD;
+}
+
 @media screen and (min-width: 860px) {
   .sidebar {
     width: 15rem;
